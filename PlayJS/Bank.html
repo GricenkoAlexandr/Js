@@ -1,12 +1,20 @@
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <script>
-var
-vkladn=parseInt(prompt("Введите сумму вклада, грн.:"));
-procent=parseInt(prompt("Введите процент годовой вклада, %:"));
-srok=parseInt(prompt("Введите срок вклада, лет:"));
-
-for (var n=1;n<=srok;n=n+1){
-	vkladn=vkladn*(1+procent/100);
-	alert("После "+n+" лет, сумма вклада на конец года="+(vkladn).toFixed(2)+" грн.");
-} 
+  let vkladn = parseInt(prompt("Введите сумму вклада, грн.:"));
+  procent = parseInt(prompt("Введите процент годовой вклада, %:"));
+  vklady = parseInt(prompt("Введите сумму ежегодного пополнения вклада, грн:"));
+  srok = parseInt(prompt("Введите срок вклада, лет:"));
+  for (var n = 1; n <= srok; n = n + 1) {
+    vkladn = (vkladn + vklady) * (1 + procent / 100);
+    alert(
+      "После " +
+        n +
+        " лет, сумма вклада на конец года=" +
+        vkladn.toFixed(2) +
+        " грн."
+    );
+  }
+  alert(
+    "спасибо, что воспользовались данной программой, надеемся на дальнейшее сотрудничество)) Ваш почитатель, Александр!"
+  );
 </script>
